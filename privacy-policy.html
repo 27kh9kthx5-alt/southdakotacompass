@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — South Dakota Compass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sky:      #e8f4f8;
+      --deep:     #1a3a4a;
+      --teal:     #2a7f8f;
+      --gold:     #c8973a;
+      --sand:     #f5f0e8;
+      --text:     #2c3e40;
+      --muted:    #6b8088;
+      --border:   #d4e4e8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      background: var(--sand);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--deep);
+      color: white;
+      padding: 64px 24px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 120%, rgba(42,127,143,0.35) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 80% -20%, rgba(200,151,58,0.2) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    .compass-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--teal), #1a5f6e);
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    .compass-mark svg {
+      width: 36px;
+      height: 36px;
+      fill: white;
+    }
+
+    header h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    header .tagline {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    header .meta {
+      display: inline-flex;
+      gap: 24px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      position: relative;
+    }
+
+    header .meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      overflow-x: auto;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 0;
+      list-style: none;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    nav a {
+      display: block;
+      padding: 14px 16px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--teal);
+      border-bottom-color: var(--teal);
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* ── INTRO CARD ── */
+    .intro-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--teal);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .intro-card strong {
+      color: var(--deep);
+      font-weight: 500;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      margin-bottom: 48px;
+      scroll-margin-top: 72px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: rgba(42,127,143,0.08);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--deep);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    li {
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    /* ── HIGHLIGHT BOXES ── */
+    .highlight {
+      background: var(--sky);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    .highlight.gold {
+      background: #fef9f0;
+      border-color: #e8d5a8;
+    }
+
+    .highlight p { margin-bottom: 8px; }
+    .highlight p:last-child { margin-bottom: 0; }
+
+    /* ── CONTACT ── */
+    .contact-card {
+      background: var(--deep);
+      color: white;
+      border-radius: 14px;
+      padding: 32px;
+      text-align: center;
+      margin-top: 56px;
+    }
+
+    .contact-card h2 {
+      color: white;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      background: var(--teal);
+      color: white;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .contact-card a:hover { background: #22697a; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    a { color: var(--teal); }
+
+    @media (max-width: 600px) {
+      header { padding: 48px 20px 40px; }
+      main { padding: 40px 20px 60px; }
+      .intro-card { padding: 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="compass-mark">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13l-2 5.5 5.5-2-2-5.5L11 7zm1 3.5c-.83 0-1.5-.67-1.5-1.5S11.17 7.5 12 7.5s1.5.67 1.5 1.5S12.83 10.5 12 10.5z"/>
+    </svg>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p class="tagline">South Dakota Compass</p>
+  <div class="meta">
+    <span>📅 Effective: January 1, 2026</span>
+    <span>🔄 Last updated: March 2026</span>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#data-collected">Data Collected</a></li>
+    <li><a href="#data-use">How We Use It</a></li>
+    <li><a href="#storage">Storage</a></li>
+    <li><a href="#sharing">Sharing</a></li>
+    <li><a href="#children">Children</a></li>
+    <li><a href="#rights">Your Rights</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- MAIN -->
+<main>
+
+  <div class="intro-card">
+    <strong>South Dakota Compass</strong> is a professional tool for early childhood educators to document student observations, track developmental milestones, and generate reports. We take the privacy of children and educators seriously. <strong>We do not sell data. We do not serve ads. Your data belongs to you.</strong>
+  </div>
+
+  <!-- 1. OVERVIEW -->
+  <section id="overview">
+    <span class="section-label">01</span>
+    <h2>Overview</h2>
+    <p>This Privacy Policy describes how South Dakota Compass ("the App," "we," "us") handles information entered by educators ("you") who use the App to document early childhood development.</p>
+    <p>South Dakota Compass is designed for use in early childhood education settings and may involve the documentation of information about children enrolled in those programs. All data entered into the App is controlled by the educator or school using it.</p>
+    <div class="highlight">
+      <p><strong>FERPA Notice:</strong> Schools using South Dakota Compass to maintain education records should ensure their use complies with the Family Educational Rights and Privacy Act (FERPA). The App stores data in your private iCloud account — we do not access it.</p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 2. DATA COLLECTED -->
+  <section id="data-collected">
+    <span class="section-label">02</span>
+    <h2>Information Collected</h2>
+    <p>South Dakota Compass stores only what you enter. This may include:</p>
+    <ul>
+      <li><strong>Student information</strong> — name, date of birth, and optional photo</li>
+      <li><strong>Observation records</strong> — developmental domain, goal, notes, date, and indicator ratings</li>
+      <li><strong>Media files</strong> — photos or images attached to observations</li>
+      <li><strong>Teacher information</strong> — name, role, and contact information entered during setup</li>
+      <li><strong>School information</strong> — school name, address, phone, email, and logo</li>
+      <li><strong>App preferences</strong> — notification settings, checkpoint periods, and school year dates</li>
+    </ul>
+    <div class="highlight gold">
+      <p><strong>We do not collect:</strong> analytics, crash diagnostics sent to us, advertising identifiers, location data, microphone or camera data beyond photos you explicitly attach, or any data beyond what you enter manually.</p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 3. HOW WE USE IT -->
+  <section id="data-use">
+    <span class="section-label">03</span>
+    <h2>How We Use Your Information</h2>
+    <p>All information you enter is used solely to provide the App's features:</p>
+    <ul>
+      <li>Displaying student profiles and observation history</li>
+      <li>Generating PDF reports for individual students, conferences, and program-wide summaries</li>
+      <li>Identifying students who may benefit from additional support</li>
+      <li>Sending local notification reminders to document observations</li>
+    </ul>
+    <p>We do not use your data for advertising, profiling, research, or any purpose beyond operating the App for you.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 4. STORAGE -->
+  <section id="storage">
+    <span class="section-label">04</span>
+    <h2>Data Storage &amp; Security</h2>
+    <p>South Dakota Compass stores all data in two places:</p>
+    <ul>
+      <li><strong>Your device</strong> — locally using Apple's SwiftData framework</li>
+      <li><strong>Your private iCloud account</strong> — synced via Apple's CloudKit private database, which only you can access. We have no access to your iCloud data.</li>
+    </ul>
+    <p>Media files (photos) are stored locally on your device in the app's private documents directory and are not accessible to other apps.</p>
+    <div class="highlight">
+      <p><strong>Security:</strong> Data in iCloud is encrypted in transit and at rest by Apple. Device data is protected by iOS's standard app sandboxing. We do not operate any servers or databases that store your information.</p>
+    </div>
+    <p>If you delete the App, all local data is deleted. iCloud data can be deleted via Settings → [your name] → iCloud → Manage Account Storage on your device.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 5. SHARING -->
+  <section id="sharing">
+    <span class="section-label">05</span>
+    <h2>Sharing &amp; Disclosure</h2>
+    <p>We do not sell, rent, trade, or share your data with any third party, except in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Apple / iCloud:</strong> Data syncs through Apple's CloudKit infrastructure under Apple's privacy terms</li>
+      <li><strong>PDF exports:</strong> When you choose to share or email a report, that PDF is shared only with recipients you explicitly select using iOS's standard share sheet</li>
+      <li><strong>Legal requirement:</strong> We may disclose information if required by law, though given we have no access to your data, this is not practically applicable</li>
+    </ul>
+    <p>We have no third-party analytics, advertising SDKs, or tracking libraries embedded in the App.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 6. CHILDREN -->
+  <section id="children">
+    <span class="section-label">06</span>
+    <h2>Information About Children</h2>
+    <p>South Dakota Compass is intended for use by educators and administrators, not by children. The App may be used to store developmental records about children enrolled in early childhood programs.</p>
+    <p>Educators using the App are responsible for ensuring they have appropriate authorization (such as parental consent or school policy) to document information about the children in their care.</p>
+    <p>We do not knowingly collect information directly from children. The App is not directed at children and is not intended for use by anyone under 18.</p>
+    <div class="highlight">
+      <p><strong>Parents &amp; Guardians:</strong> If you are a parent and have questions about records documented about your child, please contact the educator or school directly. We do not have access to student records stored in educators' private iCloud accounts.</p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 7. YOUR RIGHTS -->
+  <section id="rights">
+    <span class="section-label">07</span>
+    <h2>Your Rights &amp; Choices</h2>
+    <p>Because all data is stored locally and in your personal iCloud account, you have full control:</p>
+    <ul>
+      <li><strong>Access:</strong> All your data is visible within the App at all times</li>
+      <li><strong>Edit:</strong> You can edit or delete any student, observation, teacher, or school record from within the App</li>
+      <li><strong>Export:</strong> Generate PDF reports for any student or group at any time</li>
+      <li><strong>Delete:</strong> Delete individual records in-app, or delete all data by removing the App and clearing iCloud storage</li>
+      <li><strong>Notifications:</strong> Control reminder notifications via Admin → Notifications in the App, or via iOS Settings</li>
+    </ul>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 8. CHANGES -->
+  <section id="changes">
+    <span class="section-label">08</span>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+    <p>We encourage you to review this page periodically.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <div class="contact-card" id="contact">
+    <h2>Questions or Concerns?</h2>
+    <p>If you have any questions about this Privacy Policy or how South Dakota Compass handles your data, please reach out.</p>
+    <a href="mailto:privacy@southdakotacompass.app">privacy@southdakotacompass.app</a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 South Dakota Compass &nbsp;·&nbsp; <a href="#">Privacy Policy</a> &nbsp;·&nbsp; All data stored privately in your iCloud account</p>
+</footer>
+
+</body>
+</html>
